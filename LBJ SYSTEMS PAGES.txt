@@ -1,0 +1,135 @@
+LBJ SYSTEMS PAGES
+
+LOGIN PAGE
+	STUDENT (NO LOGIN NEEDED)
+	TEACHER	(LOGIN NEEDED)
+	ADMIN	(LOGIN NEEDED)
+
+STUDENT PAGE
+	SELECT ROOM
+		REPORT
+			ENTER PC NO.
+			IF FOUND
+				UNAVAILABLE/REPORTED 	- ALREADY REPORTED
+				REPAIRING 		- ONGOING REPAIR
+				AVAILABLE 		- CONFIRM PC
+							- DESCRIBE ISSUE/ERROR
+							- REPORT SUCESS
+			IF NOT FOUND 
+				PC NOT FOUND			
+			BACK
+		VIEW
+			SELECT DISPLAY (DROPDOWN)
+			-- ALL (DEFAULT)
+				(LIST OF PCS)
+				No.	|Condition	|Status		|Date
+
+				1	Available	N/A		12/3/2025
+				2	Available	Reported	12/3/2025
+				3	Unavailable	#ErrorCode	12/3/2025
+				4 	Unavailable	Repairing	12/3/2025
+
+			-- AVAILABLE
+				(LIST OF PCS)
+				No.	|Condition	|Status		|Date
+				1	Available	N/A		12/3/2025
+			-- UNAVAILABLE
+				(LIST OF PCS)
+				No.	|Condition	|Status		|Date
+				2	Available	Reported	12/3/2025
+				3	Unavailable	#ErrorCode	12/3/2025
+				4 	Unavailable	Repairing	12/3/2025
+
+			BACK
+		BACK
+	LOGOUT
+
+TEACHER PAGE
+	LOGIN
+	SELECT ROOM
+		VIEW AVAILABLE
+			DISPLAY
+			No.	|Status		|Date
+			1	N/A		12/3/2025
+			BACK
+		VIEW ERROR/REPORTS/REPAIRS
+			DISPLAY
+			No.	|Status		|Date		|Error Message
+
+			2	Reported	12/3/2025	PC Does not Turn On
+			3	#ErrorCode	12/3/2025	PC Does not Turn On
+			4 	Repairing	12/3/2025	PC Does Not Turn On
+
+			SELECT PC
+			--IF PC HAS ERROR
+				REPORT ERROR
+					ENTER ERROR CODE
+					CONFIRM
+					SUCESS
+				DISMISS ERROR
+					WARNING MESSAGE
+					SUCESS
+			--IF PC HAS REPORT
+				MARK REPORT AS RESOLVED
+					WARNING MESSAGE
+					SUCESS
+			--IF PC HAS REPAIR
+				MARK REPAIR AS DONE
+					WARNING MESSAGE
+					SUCESS
+			BACK
+		BACK
+	LOGOUT
+
+ADMIN PAGE
+	LOGIN
+	VIEW ERROR/REPORTS/REPAIRS
+		DISPLAY
+		Room-PC No.	|Status		|Date		|Error Message
+
+		1-2		Reported	12/3/2025	PC Does not Turn On
+		1-3		#ErrorCode	12/3/2025	PC Does not Turn On
+		1-4 		Repairing	12/3/2025	PC Does not Turn On
+
+		SELECT PC
+		--IF PC HAS REPORT
+			MARK REPORT FOR REPAIR
+				CONFIRM
+				SUCCESS
+			MARK REPORT AS FIXED
+				WARNING MESSAGE
+				SUCCESS
+		--IF PC HAS REPAIR
+			MARK REPAIR AS DONE
+				CONFIRM
+				SUCCESS
+		BACK
+	ADD ROOM / PC
+		ADD ROOM
+			ENTER HOW MANY PCs
+			CONFIRM
+			SUCESS
+		ADD PC
+			SELECT ROOM
+			ENTER PC NO.
+				IF PC Exists, ERROR
+				IF PC does not exist, 	CREATE
+							CONFIRM
+							SUCCESS
+				
+		BACK
+	REMOVE ROOM / PC
+		REMOVE ROOM
+			SELECT ROOM
+				WARNING/CONFIRM MESSAGE
+				SUCCESS
+		REMOVE PC
+			SELECT ROOM
+				ENTER PC No.
+					If PC does not exist, ERROR
+					If PC Exists, REMOVE
+						      WARNING/CONFIRM
+						      SUCCESS
+		BACK
+	LOGOUT
+	

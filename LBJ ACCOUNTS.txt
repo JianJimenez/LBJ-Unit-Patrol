@@ -1,0 +1,10 @@
+LBJ ACCOUNTS
+
+ADMINISTRATOR
+admin123
+
+PROFESSOR
+LEANNE		lvfajardo	leanne
+JIAN		jtjimenez	jian
+BENJAMIN	brteodoro	Benjamin
+TESTING		a		a

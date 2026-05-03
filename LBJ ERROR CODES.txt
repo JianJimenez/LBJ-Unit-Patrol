@@ -1,0 +1,25 @@
+General Errors
+#Freeze		PC Freezes
+#Slow		PC is slow
+#Crash		PC Crashed
+#Power		PC turns off	
+#Dead		PC Does not turn On
+#NoVideo	Video Display does not work
+#NoAudio	Audio Output does not work
+#NoNet		No Network Connection
+
+Software Errors
+#ErrApp		Application Error 
+#ErrSoft	Software Error
+#ErrOS		Operating System Error
+#ErrUPD		Windows Update Error
+#ErrDisk	Storage Disk Error
+
+Hardware Errors
+#ErrHard	Hardware Error
+#ErrMouse	Mouse is broken
+#ErrKeyB	Keyboard is broken
+#ErrMntr	Monitor is broken
+#ErrUSB		USB ports are broken
+
+
